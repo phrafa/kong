@@ -1,0 +1,15 @@
+services:
+- name: ms-customer
+  url: http://client/
+  # Entities that have a foreign-key relationship can be nested:
+  routes:
+  - name: ms-customer-route
+    paths:
+    - /customer/
+
+
+
+routes:
+- name: ms-customer-route
+  service: ms-customer
+  hosts: ["clinet"]
